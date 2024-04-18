@@ -1,5 +1,8 @@
 package com.petland.model;
 
+import jakarta.persistence.Embeddable;
+
+@Embeddable
 public class Perfil {
 
     private boolean cliente;
