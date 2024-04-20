@@ -7,6 +7,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.petland.model.dto.AnimalRequest;
 import com.petland.model.dto.AnimalResponse;
 import com.petland.model.entity.AnimalEntity;
 import com.petland.repository.AnimalRepository;
@@ -15,6 +16,21 @@ import com.petland.repository.AnimalRepository;
 public class AnimalService {
     @Autowired
     private AnimalRepository repository;
+
+    public Integer gravar(AnimalRequest requisicao){
+        AnimalEntity entidade = new AnimalEntity();
+        BeanUtils.copyProperties(requisicao, entidade);
+        return repository.save(entidade).getId();
+    }
+
+    public Integer alterar(Integer id, AnimalRequest requisicao){
+        AnimalEntity entidade =  repository.findById(id).orElse(null);
+        if(entidade != null){
+            BeanUtils.copyProperties(requisicao, entidade);
+            return repository.save(entidade).getId();
+        }
+        return null;
+    }
 
     public List<AnimalResponse> listar(){
         List<AnimalEntity> entities = repository.findAll();
@@ -25,5 +41,9 @@ public class AnimalService {
             response.add(res);
         }
         return response;
+    }
+
+    public void excluir(Integer id){
+        repository.deleteById(id); 
     }
 }
