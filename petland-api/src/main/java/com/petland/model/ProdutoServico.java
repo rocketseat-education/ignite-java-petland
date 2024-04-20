@@ -6,9 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AccessLevel;
 import lombok.Data;
-import lombok.Setter;
 
 @Entity
 @Table(name = "tab_produto_servico")
@@ -16,7 +14,7 @@ import lombok.Setter;
 public class ProdutoServico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Setter(AccessLevel.NONE)
+    //@Setter(AccessLevel.NONE)
     private Integer id;
 
     @Column(length = 50, nullable = false)
