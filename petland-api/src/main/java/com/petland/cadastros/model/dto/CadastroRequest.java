@@ -1,7 +1,7 @@
-package com.petland.model.dto;
+package com.petland.cadastros.model.dto;
 
-import com.petland.model.Endereco;
-import com.petland.model.Perfil;
+import com.petland.cadastros.model.Endereco;
+import com.petland.cadastros.model.Perfil;
 
 import lombok.Data;
 

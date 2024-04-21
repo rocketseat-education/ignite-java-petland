@@ -1,36 +1,26 @@
-package com.petland.model.entity;
-
-import com.petland.model.Endereco;
-import com.petland.model.Perfil;
+package com.petland.cadastros.model;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AccessLevel;
 import lombok.Data;
-import lombok.Setter;
 
 @Entity
-@Table(name = "tab_cadastro")
+@Table(name = "tab_produto_servico")
 @Data
-public class CadastroEntity {
-
+public class ProdutoServico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Setter(AccessLevel.NONE)
+    //@Setter(AccessLevel.NONE)
     private Integer id;
-    
+
     @Column(length = 50, nullable = false)
     private String nome;
 
-    @Embedded
-    private Perfil perfil;
+    private Double valor;
 
-    @Embedded
-    private Endereco endereco;
-
+    private Boolean servico;
 }

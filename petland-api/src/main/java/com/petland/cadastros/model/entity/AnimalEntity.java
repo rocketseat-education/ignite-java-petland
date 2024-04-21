@@ -1,8 +1,8 @@
-package com.petland.model.entity;
+package com.petland.cadastros.model.entity;
 
 import java.time.LocalDate;
 
-import com.petland.model.AnimalEspecie;
+import com.petland.cadastros.model.AnimalEspecie;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

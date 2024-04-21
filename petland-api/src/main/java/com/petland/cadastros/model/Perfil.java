@@ -1,4 +1,4 @@
-package com.petland.model;
+package com.petland.cadastros.model;
 
 import jakarta.persistence.Embeddable;
 import lombok.Data;

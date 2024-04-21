@@ -5,8 +5,8 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-import com.petland.repository.AnimalRepository;
-import com.petland.repository.CadastroRepository;
+import com.petland.cadastros.repository.AnimalRepository;
+import com.petland.cadastros.repository.CadastroRepository;
 
 @Component
 public class StartApp implements ApplicationRunner {

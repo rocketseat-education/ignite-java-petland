@@ -1,4 +1,4 @@
-package com.petland.controller;
+package com.petland.cadastros.controller;
 
 import java.util.List;
 
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.petland.model.dto.CadastroRequest;
-import com.petland.model.dto.CadastroResponse;
-import com.petland.service.CadastroService;
+import com.petland.cadastros.model.dto.CadastroRequest;
+import com.petland.cadastros.model.dto.CadastroResponse;
+import com.petland.cadastros.service.CadastroService;
 
 
 
